@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+nav {
+  width: 100%;
+  background-image: url("pattern-bg-desktop.png");
+  background-size: cover;
+}
+
+.navCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  padding-top: 20px;
+  color: white;
+  font-weight: 500;
+}
+
+.searchCont {
+  display: flex;
+  padding: 20px 0;
+  margin-bottom: 50px;
+  width: 25%;
+  height: 18%;
+}
+
+.searchBar {
+  width: 84%;
+  height: 5vh;
+  border-radius: 10px 0px 0px 10px;
+  border: none;
+  padding-left: 10px;
+}
+.searchBtn {
+  border-radius: 0 10px 10px 0;
+  width: 10%;
+  border: none;
+  background-color: black;
+  display: grid;
+  place-content: center;
+}
+
+.searchBar::placeholder {
+  font-size: 12px;
+}
+
+.searchBtn::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='14'%3E%3Cpath fill='none' stroke='%23FFF' stroke-width='3' d='M2 1l6 6-6 6'/%3E%3C/svg%3E");
+  scale: 0.6;
+}
+
+.absolute {
+  position: absolute;
+  width: 100%;
+}
+
+#map {
+  top: 24%;
+  z-index: -1;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 80%;
+  left: 30%;
+}
+
+.infoCont {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+}
+.left {
+  margin: 20px 20px;
+}
+
+.right {
+  margin: 20px 20px;
+}
+
+.middle1 {
+  margin: 20px 20px;
+}
+
+.middle2 {
+  margin: 20px 20px;
+}
+
+.infoTitle {
+  font-size: 8px;
+  color: gray;
+  font-weight: 400;
+}
+
+.infoDet {
+  padding-top: 5px;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 376px) {
+  .searchCont {
+    width: 80%;
+    height: 25%;
+  }
+
+  .searchBar {
+    height: 7vh;
+  }
+
+  .searchBar::placeholder {
+    font-size: 12px;
+  }
+  .searchBtn {
+    width: 20%;
+  }
+
+  .infoCont {
+    flex-direction: column;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .middle1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .middle2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info {
+    left: 18%;
+  }
+  #map {
+    height: 94vh;
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IP-Tracker</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,400;0,700;1,300&family=Neucha&family=Pangolin&family=Raleway:wght@100&family=Rubik:wght@400;500;700&family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <style>
+      #map {
+        height: 95vh;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="navCont">
+        <h3 class="title">IP Addres Tracker</h3>
+        <div class="searchCont">
+          <input
+            id="ipSearch"
+            type="search"
+            placeholder="search for any IP address or domain"
+            oninput="getValue()"
+            class="searchBar"
+          />
+          <button class="searchBtn"></button>
+        </div>
+      </div>
+    </nav>
+    <div class="info">
+      <div class="infoCont">
+        <div class="left">
+          <h2 class="infoTitle">IP ADDRESS</h2>
+          <p id="ip" class="infoDet"></p>
+        </div>
+        <div class="middle1">
+          <h2 class="infoTitle">LOCATION</h2>
+          <p id="lo" class="infoDet"></p>
+        </div>
+        <div class="middle2">
+          <h2 class="infoTitle">TIMEZONE</h2>
+          <p id="time" class="infoDet"></p>
+        </div>
+        <div class="right">
+          <h2 class="infoTitle">ISP</h2>
+          <p id="isp" class="infoDet"></p>
+        </div>
+      </div>
+    </div>
+    <div id="map" class="absolute"></div>
+  </body>
+</html>
